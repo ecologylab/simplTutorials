@@ -8,7 +8,7 @@ import java.net.URL;
 import ecologylab.net.ParsedURL;
 import ecologylab.xml.ElementState;
 import ecologylab.xml.TranslationScope;
-import ecologylab.xml.XMLTranslationException;
+import ecologylab.xml.SIMPLTranslationException;
 import ecologylab.xml.library.rss.Item;
 import ecologylab.xml.library.rss.RssState;
 import ecologylab.xml.library.rss.RssTranslations;
@@ -34,7 +34,7 @@ public class RssXMLTutorial
 	}
 
 	public static void main(String[] args) throws IOException,
-			XMLTranslationException
+			SIMPLTranslationException
 	{
 		/*
 		 * Get the translation scope. This references all of the classes that we
