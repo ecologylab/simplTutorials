@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 import ecologylab.net.ParsedURL;
-import ecologylab.xml.ElementState;
 import ecologylab.xml.TranslationScope;
 import ecologylab.xml.SIMPLTranslationException;
 import ecologylab.xml.library.rss.Item;
@@ -61,7 +60,7 @@ public class RssXMLTutorial
 		 * "init_connection_response". Fields that are translated into attributes
 		 * and sub elements use a similar convention for determining identifiers.
 		 */
-		RssState feed = (RssState) ElementState.translateFromXML(url,
+		RssState feed = (RssState) TranslationScope.translateFromXML(url,
 				rssTranslations);
 
 		/*

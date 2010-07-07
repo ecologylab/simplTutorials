@@ -9,7 +9,6 @@ import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
-import ecologylab.xml.ElementState;
 import ecologylab.xml.TranslationScope;
 
 
@@ -29,11 +28,11 @@ public class PolymorphicTutorial
 			/*
 			 * Translating back from sample gameData file
 			 */
-			Object gd = ElementState.translateFromXML(inputGameData, tScope);
+			Object gd = TranslationScope.translateFromXML(inputGameData, tScope);
 			GameData<?> gameData = null;
 			
 			if(gd instanceof GameData<?>)
-				gameData = (GameData<?>) ElementState.translateFromXML(inputGameData, tScope);
+				gameData = (GameData<?>) TranslationScope.translateFromXML(inputGameData, tScope);
 			else
 				System.out.println("Invalid object returned by translateFromXML");
 			
