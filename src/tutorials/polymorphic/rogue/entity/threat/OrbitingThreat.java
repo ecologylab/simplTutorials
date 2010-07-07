@@ -3,8 +3,8 @@
  */
 package tutorials.polymorphic.rogue.entity.threat;
 
-import ecologylab.xml.simpl_inherit;
-import ecologylab.xml.ElementState.xml_tag;
+import ecologylab.serialization.simpl_inherit;
+import ecologylab.serialization.ElementState.xml_tag;
 
 /**
  * A special predator that finds a goal and stays near it.

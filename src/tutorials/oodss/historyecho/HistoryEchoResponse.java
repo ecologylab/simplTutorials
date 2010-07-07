@@ -1,6 +1,6 @@
 package tutorials.oodss.historyecho;
 import ecologylab.collections.Scope;
-import ecologylab.services.messages.ResponseMessage;
+import ecologylab.oodss.messages.ResponseMessage;
 
 /**
  * Implements a message that will be sent back to
@@ -14,7 +14,7 @@ public class HistoryEchoResponse extends ResponseMessage
 	
 	/** 
 	 * Constructor used on client.
-	 * Fields populated automatically by ecologylab.xml
+	 * Fields populated automatically by ecologylab.serialization
 	 */	
 	public HistoryEchoResponse() {}
 	

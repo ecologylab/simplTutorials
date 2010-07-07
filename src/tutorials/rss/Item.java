@@ -5,8 +5,8 @@ package tutorials.rss;
 import java.util.ArrayList;
 
 import ecologylab.net.ParsedURL;
-import ecologylab.xml.ElementState;
-import ecologylab.xml.Hint;
+import ecologylab.serialization.ElementState;
+import ecologylab.serialization.Hint;
 
 public class Item extends ElementState
 {

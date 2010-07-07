@@ -6,8 +6,8 @@ package tutorials.polymorphic.rogue.entity.threat;
 
 
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
-import ecologylab.xml.simpl_inherit;
-import ecologylab.xml.ElementState.xml_tag;
+import ecologylab.serialization.simpl_inherit;
+import ecologylab.serialization.ElementState.xml_tag;
 
 /**
  * Threats are Targetters that hunt down SeekerAvatars in the game. Their in-game behavior is to

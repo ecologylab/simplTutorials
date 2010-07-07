@@ -5,8 +5,8 @@ import java.net.InetAddress;
 
 import ecologylab.collections.Scope;
 import ecologylab.net.NetTools;
-import ecologylab.services.distributed.server.DoubleThreadedNIOServer;
-import ecologylab.xml.TranslationScope;
+import ecologylab.oodss.distributed.server.DoubleThreadedNIOServer;
+import ecologylab.serialization.TranslationScope;
 
 /**
  * PublicChatServer: A sample server implemented via OODSS. Intended to be used

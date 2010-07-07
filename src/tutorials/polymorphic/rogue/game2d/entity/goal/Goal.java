@@ -7,8 +7,8 @@ package tutorials.polymorphic.rogue.game2d.entity.goal;
 import java.awt.geom.Rectangle2D;
 
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
-import ecologylab.xml.simpl_inherit;
-import ecologylab.xml.ElementState.xml_tag;
+import ecologylab.serialization.simpl_inherit;
+import ecologylab.serialization.ElementState.xml_tag;
 
 /**
  * Goal represents a goal location. Goals can be collected by SeekerAvatar objects if the

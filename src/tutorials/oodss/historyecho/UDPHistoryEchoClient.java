@@ -4,9 +4,9 @@ import java.net.InetSocketAddress;
 import java.util.Scanner;
 
 import ecologylab.collections.Scope;
-import ecologylab.services.distributed.client.NIODatagramClient;
-import ecologylab.services.messages.DefaultServicesTranslations;
-import ecologylab.xml.TranslationScope;
+import ecologylab.oodss.distributed.client.NIODatagramClient;
+import ecologylab.oodss.messages.DefaultServicesTranslations;
+import ecologylab.serialization.TranslationScope;
 
 /** 
  * HistoryEchoServer: A sample server implemented via OODSS.

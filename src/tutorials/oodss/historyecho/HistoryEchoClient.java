@@ -3,10 +3,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import ecologylab.collections.Scope;
-import ecologylab.services.distributed.client.NIOClient;
-import ecologylab.services.distributed.exception.MessageTooLargeException;
-import ecologylab.services.messages.DefaultServicesTranslations;
-import ecologylab.xml.TranslationScope;
+import ecologylab.oodss.distributed.client.NIOClient;
+import ecologylab.oodss.distributed.exception.MessageTooLargeException;
+import ecologylab.oodss.messages.DefaultServicesTranslations;
+import ecologylab.serialization.TranslationScope;
 
 /** 
  * HistoryEchoServer: A sample server implemented via OODSS.

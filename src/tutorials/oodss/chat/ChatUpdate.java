@@ -1,8 +1,8 @@
 package tutorials.oodss.chat;
 
 import ecologylab.collections.Scope;
-import ecologylab.services.distributed.server.clientsessionmanager.SessionHandle;
-import ecologylab.services.messages.UpdateMessage;
+import ecologylab.oodss.distributed.server.clientsessionmanager.SessionHandle;
+import ecologylab.oodss.messages.UpdateMessage;
 
 /**
  * Implements a message that will be sent to chat clients to indicate that
@@ -23,7 +23,7 @@ public class ChatUpdate extends UpdateMessage
 
 	/**
 	 * Constructor used on client. Fields populated automatically by
-	 * ecologylab.xml
+	 * ecologylab.serialization
 	 */
 	public ChatUpdate()
 	{

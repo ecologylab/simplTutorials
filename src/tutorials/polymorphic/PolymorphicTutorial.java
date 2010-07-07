@@ -9,7 +9,7 @@ import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
-import ecologylab.xml.TranslationScope;
+import ecologylab.serialization.TranslationScope;
 
 
 public class PolymorphicTutorial 

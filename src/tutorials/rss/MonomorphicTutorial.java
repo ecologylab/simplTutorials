@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 import ecologylab.net.ParsedURL;
-import ecologylab.xml.TranslationScope;
-import ecologylab.xml.SIMPLTranslationException;
+import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.TranslationScope;
 
 public class MonomorphicTutorial {
 	
@@ -64,7 +64,7 @@ public class MonomorphicTutorial {
 		 * still remain. If an attribute or element is not annotated in the
 		 * corresponding java class it is simply ignored.
 		 */
-		System.out.println("\nFeed translated back to xml by ecologylab.xml:");
+		System.out.println("\nFeed translated back to xml by ecologylab.serialization:");
 		System.out.println(feed.serialize());
 
 		/*

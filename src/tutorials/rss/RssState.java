@@ -2,7 +2,7 @@
 
 package tutorials.rss;
 
-import ecologylab.xml.ElementState;
+import ecologylab.serialization.ElementState;
 
 public class RssState extends ElementState
 {

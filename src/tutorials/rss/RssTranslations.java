@@ -3,7 +3,7 @@
 package tutorials.rss;
 
 import ecologylab.generic.Debug;
-import ecologylab.xml.TranslationScope;
+import ecologylab.serialization.TranslationScope;
 
 public class RssTranslations extends Debug
 {

@@ -16,9 +16,9 @@ import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 
 import ecologylab.collections.Scope;
-import ecologylab.services.distributed.client.NIOClient;
-import ecologylab.services.distributed.exception.MessageTooLargeException;
-import ecologylab.xml.TranslationScope;
+import ecologylab.oodss.distributed.client.NIOClient;
+import ecologylab.oodss.distributed.exception.MessageTooLargeException;
+import ecologylab.serialization.TranslationScope;
 
 /**
  * ChatClientWindow implements a basic chat client. Attaches to

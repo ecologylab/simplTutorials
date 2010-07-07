@@ -1,7 +1,7 @@
 package tutorials.oodss.chat;
 
-import ecologylab.services.messages.DefaultServicesTranslations;
-import ecologylab.xml.TranslationScope;
+import ecologylab.oodss.messages.DefaultServicesTranslations;
+import ecologylab.serialization.TranslationScope;
 
 public class ChatTranslations
 {

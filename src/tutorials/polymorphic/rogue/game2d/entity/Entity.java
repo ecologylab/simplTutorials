@@ -6,7 +6,7 @@ package tutorials.polymorphic.rogue.game2d.entity;
 
 
 
-import ecologylab.xml.ElementState;
+import ecologylab.serialization.ElementState;
 
 /**
  * Entity represents various objects in the Rogue Signals game. It is the basis from which the other

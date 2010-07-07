@@ -1,6 +1,6 @@
 package tutorials.oodss.historyecho;
 import ecologylab.collections.Scope;
-import ecologylab.services.messages.RequestMessage;
+import ecologylab.oodss.messages.RequestMessage;
 
 /**
  * Implements a message that will be sent to
@@ -18,7 +18,7 @@ public class HistoryEchoRequest extends RequestMessage
 	
 	/** 
 	 * Constructor used on server.
-	 * Fields populated automatically by ecologylab.xml
+	 * Fields populated automatically by ecologylab.serialization
 	*/
 	public HistoryEchoRequest() {}
 	

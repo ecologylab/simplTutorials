@@ -3,8 +3,8 @@
  */
 package tutorials.polymorphic.rogue.game2d.entity.goal;
 
-import ecologylab.xml.simpl_inherit;
-import ecologylab.xml.ElementState.xml_tag;
+import ecologylab.serialization.simpl_inherit;
+import ecologylab.serialization.ElementState.xml_tag;
 
 /**
  * @author Zachary O. Toups (toupsz@ecologylab.net)

@@ -10,7 +10,7 @@ import tutorials.polymorphic.rogue.entity.threat.PatrollingThreat;
 import tutorials.polymorphic.rogue.entity.threat.RepellableThreat;
 import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
-import ecologylab.xml.ElementState;
+import ecologylab.serialization.ElementState;
 
 /**
  * GameData encapsulates all of the logical information about the game and is shared between the

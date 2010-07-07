@@ -3,11 +3,11 @@ package tutorials.oodss.chat;
 import java.util.HashMap;
 
 import ecologylab.collections.Scope;
-import ecologylab.services.distributed.common.SessionObjects;
-import ecologylab.services.distributed.server.clientsessionmanager.SessionHandle;
-import ecologylab.services.messages.OkResponse;
-import ecologylab.services.messages.RequestMessage;
-import ecologylab.services.messages.ResponseMessage;
+import ecologylab.oodss.distributed.common.SessionObjects;
+import ecologylab.oodss.distributed.server.clientsessionmanager.SessionHandle;
+import ecologylab.oodss.messages.OkResponse;
+import ecologylab.oodss.messages.RequestMessage;
+import ecologylab.oodss.messages.ResponseMessage;
 
 /**
  * Implements a message that will be sent to PublicChatServer to indicate that
@@ -25,7 +25,7 @@ public class ChatRequest extends RequestMessage
 
 	/**
 	 * Constructor used on server. Fields populated automatically by
-	 * ecologylab.xml
+	 * ecologylab.serialization
 	 */
 	public ChatRequest()
 	{
