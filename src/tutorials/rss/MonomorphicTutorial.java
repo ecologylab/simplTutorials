@@ -57,8 +57,7 @@ public class MonomorphicTutorial {
 		 * "init_connection_response". Fields that are translated into attributes
 		 * and sub elements use a similar convention for determining identifiers.
 		 */
-		RssState feed = (RssState) TranslationScope.translateFromXML(url,
-				rssTranslations);
+		RssState feed = (RssState) rssTranslations.deserialize(url);
 
 		/*
 		 * Notice that, translated back to xml, not all attributes and elements

@@ -28,11 +28,11 @@ public class PolymorphicTutorial
 			/*
 			 * Translating back from sample gameData file
 			 */
-			Object gd = TranslationScope.translateFromXML(inputGameData, tScope);
+			Object gd = tScope.deserialize(inputGameData);
 			GameData<?> gameData = null;
 			
 			if(gd instanceof GameData<?>)
-				gameData = (GameData<?>) TranslationScope.translateFromXML(inputGameData, tScope);
+				gameData = (GameData<?>) tScope.deserialize(inputGameData);
 			else
 				System.out.println("Invalid object returned by translateFromXML");
 			
