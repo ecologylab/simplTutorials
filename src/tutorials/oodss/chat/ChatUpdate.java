@@ -2,8 +2,6 @@ package tutorials.oodss.chat;
 
 import ecologylab.collections.Scope;
 import ecologylab.services.distributed.server.clientsessionmanager.SessionHandle;
-import ecologylab.services.messages.RequestMessage;
-import ecologylab.services.messages.ResponseMessage;
 import ecologylab.services.messages.UpdateMessage;
 
 /**
@@ -14,13 +12,13 @@ import ecologylab.services.messages.UpdateMessage;
  */
 public class ChatUpdate extends UpdateMessage
 {
-	@xml_attribute
+	@simpl_scalar
 	private String	message;
 
-	@xml_attribute
+	@simpl_scalar
 	private String	host;
 
-	@xml_attribute
+	@simpl_scalar
 	private int		port;
 
 	/**

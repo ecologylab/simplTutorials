@@ -67,7 +67,7 @@ public class MonomorphicTutorial {
 		 * corresponding java class it is simply ignored.
 		 */
 		System.out.println("\nFeed translated back to xml by ecologylab.xml:");
-		System.out.println(feed.translateToXML());
+		System.out.println(feed.serialize());
 
 		/*
 		 * Create our own item to add to the channel
@@ -86,7 +86,7 @@ public class MonomorphicTutorial {
 		feed.getChannel().getItems().add(0, ecologylabItem);
 
 		System.out.println("\nFeed translated to xml with our added item:");
-		System.out.println(feed.translateToXML());
+		System.out.println(feed.serialize());
 	}
 
 }

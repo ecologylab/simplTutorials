@@ -4,7 +4,7 @@
 
 package tutorials.polymorphic.rogue.entity.threat;
 
-import ecologylab.xml.xml_inherit;
+import ecologylab.xml.simpl_inherit;
 import ecologylab.xml.ElementState.xml_tag;
 
 /**
@@ -15,7 +15,7 @@ import ecologylab.xml.ElementState.xml_tag;
  * @author Zachary O. Toups (zach@ecologylab.net)
  * @author Qing Xing
  */
-public @xml_inherit
+public @simpl_inherit
 @xml_tag("nt")
 class RepellableThreat extends Threat
 {

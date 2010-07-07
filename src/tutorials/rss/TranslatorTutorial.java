@@ -2,7 +2,7 @@
 
 package tutorials.rss;
 
-import java.io.*;
+import java.io.File;
 
 import translators.cocoa.CocoaTranslator;
 import ecologylab.xml.TranslationScope;
@@ -37,7 +37,7 @@ public class TranslatorTutorial
 			 * Call translateToXML will serialize the internal data structures of 
 			 * ecologylab.xml which should be used by objective-c version ecologylab.xml
 			 */
-			tScope.translateToXML(new File("/output/rss_translationScope.xml"));
+			tScope.serialize(new File("/output/rss_translationScope.xml"));
 		} 
 		catch (Exception e)
 		{

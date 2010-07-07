@@ -20,7 +20,7 @@ public class ChatRequest extends RequestMessage
 	/**
 	 * The message being posted.
 	 */
-	@xml_attribute
+	@simpl_scalar
 	String									message;
 
 	/**

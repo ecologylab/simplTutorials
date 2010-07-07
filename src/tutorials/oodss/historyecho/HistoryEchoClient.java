@@ -2,11 +2,11 @@ package tutorials.oodss.historyecho;
 import java.io.IOException;
 import java.util.Scanner;
 
-import ecologylab.xml.TranslationScope;
 import ecologylab.collections.Scope;
-import ecologylab.services.distributed.client.*;
+import ecologylab.services.distributed.client.NIOClient;
 import ecologylab.services.distributed.exception.MessageTooLargeException;
 import ecologylab.services.messages.DefaultServicesTranslations;
+import ecologylab.xml.TranslationScope;
 
 /** 
  * HistoryEchoServer: A sample server implemented via OODSS.

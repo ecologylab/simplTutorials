@@ -3,7 +3,7 @@
  */
 package tutorials.polymorphic.rogue.entity.threat;
 
-import ecologylab.xml.xml_inherit;
+import ecologylab.xml.simpl_inherit;
 import ecologylab.xml.ElementState.xml_tag;
 
 /**
@@ -11,11 +11,11 @@ import ecologylab.xml.ElementState.xml_tag;
  * 
  */
 
-@xml_inherit
+@simpl_inherit
 @xml_tag("sst")
 public class SingleSeekerThreat extends Threat
 {
-	@xml_attribute
+	@simpl_scalar
 	int	targetOrd;
 
 	/**

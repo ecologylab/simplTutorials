@@ -3,19 +3,21 @@
 package tutorials.rss;
 
 import java.util.ArrayList;
+
 import ecologylab.net.ParsedURL;
 import ecologylab.xml.ElementState;
+import ecologylab.xml.Hint;
 
 public class Item extends ElementState
 {
-   @xml_leaf String			title;
-   @xml_leaf String			description;
-   @xml_leaf ParsedURL		link;
-   @xml_leaf ParsedURL		guid;
-   @xml_leaf String			author;
+   @simpl_scalar @simpl_hints(Hint.XML_LEAF) String			title;
+   @simpl_scalar @simpl_hints(Hint.XML_LEAF) String			description;
+   @simpl_scalar @simpl_hints(Hint.XML_LEAF) ParsedURL		link;
+   @simpl_scalar @simpl_hints(Hint.XML_LEAF) ParsedURL		guid;
+   @simpl_scalar @simpl_hints(Hint.XML_LEAF) String			author;
    
-   @xml_nowrap
-   @xml_collection("category") 
+   @simpl_nowrap
+   @simpl_collection("category") 
    ArrayList<String>		categorySet;
    
    public Item() {}

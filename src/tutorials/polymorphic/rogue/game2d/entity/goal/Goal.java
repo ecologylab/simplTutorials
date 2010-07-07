@@ -5,8 +5,9 @@
 package tutorials.polymorphic.rogue.game2d.entity.goal;
 
 import java.awt.geom.Rectangle2D;
+
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
-import ecologylab.xml.xml_inherit;
+import ecologylab.xml.simpl_inherit;
 import ecologylab.xml.ElementState.xml_tag;
 
 /**
@@ -18,7 +19,7 @@ import ecologylab.xml.ElementState.xml_tag;
  * 
  * @author Zachary O. Toups (zach@ecologylab.net)
  */
-@xml_inherit
+@simpl_inherit
 @xml_tag("g")
 public class Goal extends Entity implements GoalConstants, Comparable<Goal>
 {
@@ -28,10 +29,10 @@ public class Goal extends Entity implements GoalConstants, Comparable<Goal>
 
 	protected int									group;
 
-	@xml_attribute
+	@simpl_scalar
 	protected int								numReqSkr				= 1;
 
-	@xml_attribute
+	@simpl_scalar
 	protected int									cycToCol;
 
 	protected int 								sectorSize				= 200;

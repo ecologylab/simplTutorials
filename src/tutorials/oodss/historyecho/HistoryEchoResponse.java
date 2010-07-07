@@ -1,6 +1,5 @@
 package tutorials.oodss.historyecho;
 import ecologylab.collections.Scope;
-import ecologylab.services.messages.RequestMessage;
 import ecologylab.services.messages.ResponseMessage;
 
 /**
@@ -10,8 +9,8 @@ import ecologylab.services.messages.ResponseMessage;
  */
 public class HistoryEchoResponse extends ResponseMessage
 {
-	@xml_attribute String echo;
-	@xml_attribute String prevEcho;
+	@simpl_scalar String echo;
+	@simpl_scalar String prevEcho;
 	
 	/** 
 	 * Constructor used on client.

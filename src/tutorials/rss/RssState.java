@@ -6,8 +6,8 @@ import ecologylab.xml.ElementState;
 
 public class RssState extends ElementState
 {
-	@xml_attribute	float		version;
-	@xml_nested		Channel		channel;
+	@simpl_scalar	float		version;
+	@simpl_composite		Channel		channel;
 
 	public RssState() {}
 

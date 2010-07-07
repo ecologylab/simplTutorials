@@ -14,7 +14,7 @@ public class HistoryEchoRequest extends RequestMessage
 	 * sent from the client application
 	 */
 	final static String ECHO_HISTORY = "ECHO_HISTORY";
-	@xml_attribute String newEcho;
+	@simpl_scalar String newEcho;
 	
 	/** 
 	 * Constructor used on server.

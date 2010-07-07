@@ -6,7 +6,7 @@ package tutorials.polymorphic.rogue.entity.threat;
 
 
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
-import ecologylab.xml.xml_inherit;
+import ecologylab.xml.simpl_inherit;
 import ecologylab.xml.ElementState.xml_tag;
 
 /**
@@ -17,7 +17,7 @@ import ecologylab.xml.ElementState.xml_tag;
  * @author Zachary O. Toups (zach@ecologylab.net)
  * @author William Hamilton (bill@ecologylab.net)
  */
-@xml_inherit
+@simpl_inherit
 @xml_tag("t")
 public class Threat extends Entity
 {

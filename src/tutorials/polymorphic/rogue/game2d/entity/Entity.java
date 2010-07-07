@@ -26,26 +26,26 @@ public class Entity extends ElementState
 	 */
 	protected int								animState	= 0;
 
-	@xml_attribute
+	@simpl_scalar
 	protected String						m_id;
 
-	@xml_attribute
+	@simpl_scalar
 	protected boolean						online		= false;
 
 	/**
 	 * The Entity can interact with and be acted upon by the game and other entities.
 	 */
-	@xml_attribute
+	@simpl_scalar
 	protected boolean						m_in				= false;
 
-	@xml_attribute
+	@simpl_scalar
 	protected boolean						safe			= false;
 
 	/**
 	 * The order in which the seeker joined the game. This is used to determine the seeker's color when
 	 * it is drawn on the screen.
 	 */
-	@xml_attribute
+	@simpl_scalar
 	protected int								ord				= 0;
 
 	public Entity()

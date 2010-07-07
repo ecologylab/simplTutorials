@@ -24,7 +24,7 @@ public class PolymorphicTutorial
 			 * Get translation scope
 			 */
 			TranslationScope tScope = get();
-			File inputGameData = new File("ecologylab/tutorials/polymorphic/GameData.xml");
+			File inputGameData = new File("src/tutorials/polymorphic/GameData.xml");
 			
 			/*
 			 * Translating back from sample gameData file
@@ -40,10 +40,10 @@ public class PolymorphicTutorial
 			/*
 			 * Translating the game data back to XML 
 			 */
-			gameData.translateToXML(new File("ecologylab/tutorials/polymorphic/output.xml"));
+			gameData.serialize(new File("ecologylab/tutorials/polymorphic/output.xml"));
 			
 			//Again to console
-			gameData.translateToXML(System.out);
+			gameData.serialize(System.out);
 			
 			
 		}

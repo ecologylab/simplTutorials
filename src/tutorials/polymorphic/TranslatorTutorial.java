@@ -2,6 +2,7 @@ package tutorials.polymorphic;
 
 import java.io.File;
 
+import translators.cocoa.CocoaTranslator;
 import tutorials.polymorphic.rogue.entity.threat.OrbitingThreat;
 import tutorials.polymorphic.rogue.entity.threat.PatrollingThreat;
 import tutorials.polymorphic.rogue.entity.threat.RepellableThreat;
@@ -10,7 +11,6 @@ import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
 import ecologylab.xml.TranslationScope;
-import translators.cocoa.CocoaTranslator;
 
 public class TranslatorTutorial
 {
@@ -41,7 +41,7 @@ public class TranslatorTutorial
 			 * Call translateToXML will serialize the internal data structures of 
 			 * ecologylab.xml which should be used by objective-c version ecologylab.xml
 			 */
-			tScope.translateToXML(new File("/output/gamedata_translationScope.xml"));
+			tScope.serialize(new File("/output/gamedata_translationScope.xml"));
 		} 
 		catch (Exception e)
 		{

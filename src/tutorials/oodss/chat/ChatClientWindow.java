@@ -1,30 +1,23 @@
 package tutorials.oodss.chat;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
-import java.util.Scanner;
 
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.EtchedBorder;
-import javax.swing.border.TitledBorder;
 
 import ecologylab.collections.Scope;
 import ecologylab.services.distributed.client.NIOClient;
 import ecologylab.services.distributed.exception.MessageTooLargeException;
-import ecologylab.services.messages.DefaultServicesTranslations;
 import ecologylab.xml.TranslationScope;
 
 /**

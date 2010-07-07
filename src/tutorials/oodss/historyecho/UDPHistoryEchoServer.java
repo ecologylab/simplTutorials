@@ -4,7 +4,6 @@ import java.net.InetAddress;
 
 import ecologylab.collections.Scope;
 import ecologylab.net.NetTools;
-import ecologylab.services.distributed.server.DoubleThreadedNIOServer;
 import ecologylab.services.distributed.server.NIODatagramServer;
 import ecologylab.services.messages.DefaultServicesTranslations;
 import ecologylab.xml.TranslationScope;
