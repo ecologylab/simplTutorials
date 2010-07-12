@@ -1,0 +1,115 @@
+<translation_scope name="gamedata">
+	<class_descriptor
+		described_class="tutorials.polymorphic.rogue.entity.threat.OrbitingThreat"
+		tag_name="ot">
+		<field_descriptor field="m_id" tag_name="m_id" type="18"
+			scalar_type="StringType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="online" tag_name="online"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="m_in" tag_name="m_in" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="safe" tag_name="safe" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="ord" tag_name="ord" type="18"
+			scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor
+		described_class="tutorials.polymorphic.rogue.entity.threat.RepellableThreat"
+		tag_name="nt">
+		<field_descriptor field="m_id" tag_name="m_id" type="18"
+			scalar_type="StringType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="online" tag_name="online"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="m_in" tag_name="m_in" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="safe" tag_name="safe" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="ord" tag_name="ord" type="18"
+			scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor
+		described_class="tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat"
+		tag_name="sst">
+		<field_descriptor field="m_id" tag_name="m_id" type="18"
+			scalar_type="StringType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="online" tag_name="online"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="m_in" tag_name="m_in" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="safe" tag_name="safe" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="ord" tag_name="ord" type="18"
+			scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="targetOrd" tag_name="target_ord"
+			type="18" scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor described_class="tutorials.polymorphic.rogue.entity.threat.Threat"
+		tag_name="t">
+		<field_descriptor field="m_id" tag_name="m_id" type="18"
+			scalar_type="StringType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="online" tag_name="online"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="m_in" tag_name="m_in" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="safe" tag_name="safe" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="ord" tag_name="ord" type="18"
+			scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor described_class="tutorials.polymorphic.rogue.game2d.entity.Entity"
+		tag_name="entity">
+		<field_descriptor field="m_id" tag_name="m_id" type="18"
+			scalar_type="StringType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="online" tag_name="online"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="m_in" tag_name="m_in" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="safe" tag_name="safe" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="ord" tag_name="ord" type="18"
+			scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor
+		described_class="tutorials.polymorphic.rogue.entity.threat.PatrollingThreat"
+		tag_name="pt">
+		<field_descriptor field="m_id" tag_name="m_id" type="18"
+			scalar_type="StringType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="online" tag_name="online"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="m_in" tag_name="m_in" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="safe" tag_name="safe" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="ord" tag_name="ord" type="18"
+			scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+	<class_descriptor described_class="tutorials.polymorphic.rogue.gamedata.GameData"
+		tag_name="game_data">
+		<field_descriptor field="timestamp" tag_name="timestamp"
+			type="18" scalar_type="LongType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="cycRem" tag_name="cyc_rem"
+			type="18" scalar_type="IntType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="paused" tag_name="paused"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="loaded" tag_name="loaded"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="over" tag_name="over" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="running" tag_name="running"
+			type="18" scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="won" tag_name="won" type="18"
+			scalar_type="BooleanType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+		<field_descriptor field="threats" tag_name="threats"
+			type="4" collection_or_map_tag_name="" wrapped="true">
+			<tag_classes>
+				<tagClasses>tutorials.polymorphic.rogue.entity.threat.PatrollingThreat</tagClasses>
+				<tagClasses>tutorials.polymorphic.rogue.entity.threat.OrbitingThreat</tagClasses>
+				<tagClasses>tutorials.polymorphic.rogue.entity.threat.RepellableThreat</tagClasses>
+				<tagClasses>tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat</tagClasses>
+				<tagClasses>tutorials.polymorphic.rogue.entity.threat.Threat</tagClasses>
+			</tag_classes>
+		</field_descriptor>
+		<field_descriptor field="score" tag_name="score"
+			type="18" scalar_type="DoubleType" xml_hint="XML_ATTRIBUTE"></field_descriptor>
+	</class_descriptor>
+</translation_scope>
