@@ -29,3 +29,22 @@
 		<class_c simpl_ref="2023870964" />
 	</class_b>
 </class_d>
+
+
+<container>
+	<a_objects>
+		<objectsA u="55" w="54" simpl_id="1153274506" />
+		<objectsA simpl_ref="1153274506" />
+		<objectsA u="55" w="54" />
+		<objectsA u="55" w="54" />
+	</a_objects>
+</container>
+
+<container>
+	<a_objects>
+		<objectsA u="55" w="54" simpl_id="186888796" />
+		<objectsA simpl_ref="186888796" />
+		<objectsA u="55" w="54" />
+		<objectsA u="55" w="54" />
+	</a_objects>
+</container>
