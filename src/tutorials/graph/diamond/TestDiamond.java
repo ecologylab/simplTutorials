@@ -2,6 +2,7 @@ package tutorials.graph.diamond;
 
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
 
 public class TestDiamond
 {
@@ -14,6 +15,8 @@ public class TestDiamond
 	{
 		ClassC classC = new ClassC();
 		ClassD test = new ClassD(new ClassA(classC), new ClassB(classC));
+		
+		TranslationScope.graphSwitch = GRAPH_SWITCH.ON;
 
 		StringBuilder output = new StringBuilder();
 
@@ -28,5 +31,4 @@ public class TestDiamond
 		System.out.println("Deserilized object serialized into XML representation");
 		deserializedTest.serialize(System.out);
 	}
-
 }

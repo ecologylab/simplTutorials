@@ -3,6 +3,7 @@ package tutorials.graph.collections;
 import java.io.IOException;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
 
 public class TestCollection
 {
@@ -15,6 +16,8 @@ public class TestCollection
 	{
 		Container test = new Container();
 		StringBuilder output = new StringBuilder();
+		
+		TranslationScope.graphSwitch = GRAPH_SWITCH.ON;
 
 		test.initializeInstance();
 		test.serialize(output);

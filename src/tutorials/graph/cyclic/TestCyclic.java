@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
 
 public class TestCyclic
 {
@@ -18,12 +19,16 @@ public class TestCyclic
 		ClassB test = new ClassB();
 		StringBuilder output = new StringBuilder();
 
+		TranslationScope.graphSwitch = GRAPH_SWITCH.ON;
+		
 		test.initializeInstance();
 		test.serialize(output);
 
 		System.out.println("Initialized object serialized into XML representation.");
 		System.out.println(output);
 
+
+		
 		ClassB deserializedTest = (ClassB) TranslationScope
 				.get("testcase1", ClassA.class, ClassB.class).deserializeCharSequence(output);
 
