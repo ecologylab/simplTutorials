@@ -3,12 +3,14 @@ package tutorials.rss;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.URL;
 
 import ecologylab.net.ParsedURL;
 import ecologylab.serialization.ElementState;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.ElementState.FORMAT;
 
 public class MonomorphicTutorial {
 	
@@ -42,7 +44,7 @@ public class MonomorphicTutorial {
 		/*
 		 * Read in RSS feed from URL
 		 */
-		URL url = new URL("http://www.xkcd.com/rss.xml");
+		URL url = new URL("http://rss.cnn.com/rss/cnn_us.rss");
 		String rssContent = readURL(url);
 
 		System.out.println("Raw RSS Feed:");
@@ -86,6 +88,23 @@ public class MonomorphicTutorial {
 
 		System.out.println("\nFeed translated to xml with our added item:");
 		System.out.println(feed.serialize());
+		
+//		final StringBuilder sb = new StringBuilder();
+//		OutputStream outputStream = new OutputStream()
+//		{
+//			@Override
+//			public void write(int b) throws IOException
+//			{
+//				sb.append((char) b);
+//			}
+//		};
+//		
+//		
+//		feed.serialize(outputStream, Format.JSON);
+//		System.out.println(sb);
+//		RssState data = (RssState) rssTranslations.deserializeCharSequence(sb, Format.JSON);
+//		data.serialize(System.out, Format.JSON);
+		
 	}
 
 }
