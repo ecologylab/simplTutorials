@@ -53,14 +53,14 @@ public class MonomorphicTutorial {
 		/*
 		 * Instantiate RssState by translating the xml to java objects. Take a
 		 * look at RssState, Channel, and Item to see how they are annotated to
-		 * facilitate translation. Note that RssState's class tag is rss. This is
+		 * facilitate translation. Note that Rss's class tag is rss. This is
 		 * an inherent rule: all classes that subclass ElementState have a class
 		 * tag of just the class name. Normally ecolobylab.xml uses a camel-case
 		 * translation, so InitConnectionResponse has a class tag of
 		 * "init_connection_response". Fields that are translated into attributes
 		 * and sub elements use a similar convention for determining identifiers.
 		 */
-		RssState feed = (RssState) rssTranslations.deserialize(url);
+		Rss feed = (Rss) rssTranslations.deserialize(url);
 
 		/*
 		 * Notice that, translated back to xml, not all attributes and elements
