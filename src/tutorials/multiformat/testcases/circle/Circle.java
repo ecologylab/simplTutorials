@@ -2,22 +2,44 @@ package tutorials.multiformat.testcases.circle;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+
+import translators.cocoa.CocoaTranslator;
+
+
 import ecologylab.serialization.*;
+import ecologylab.serialization.tlv.TLVParser;
 import ecologylab.serialization.tlv.Utils;
 
+/**
+ * a simple example for simpl serialization
+ * declares a class Circle
+ * @author nabeelshahzad
+ *
+ */
 public class Circle extends ElementState
 {
+	/**
+	 * attribute defines the the radius of the circle
+	 */
 	@simpl_scalar
 	@simpl_hints(Hint.XML_LEAF)
 	private int		radius;
 
+	/**
+	 * Composite object of type Point 
+	 * defines the 
+	 */
 	@simpl_composite
 	private Point	center;
 
+	/**
+	 * attribute field defines the area of the circle 
+	 */
 	@simpl_scalar
 	@simpl_hints(Hint.XML_LEAF)
 	private int		area;
@@ -59,6 +81,8 @@ public class Circle extends ElementState
 			}
 		};
 		
+		TranslationScope circleTranslationScope = TranslationScope.get("circle", Circle.class, Point.class);
+		
 		Point center = new Point();
 		center.setX(2);
 		center.setY(3);
@@ -77,30 +101,28 @@ public class Circle extends ElementState
 		circle.serialize(outputStream, FORMAT.JSON);
 		System.out.println(sb);
 		
-		Circle data = (Circle) TranslationScope.get("circle", Circle.class, Point.class).deserializeCharSequence(sb, FORMAT.JSON);
+		Circle data = (Circle) circleTranslationScope.deserializeCharSequence(sb, FORMAT.JSON);
 		
 		System.out.println();
 		data.serialize(System.out, FORMAT.XML);
 		System.out.println();
 		data.serialize(System.out, FORMAT.JSON);
 		
-				
-		//circle.serialize(System.out, Format.TLV);
-//		circle.serializeToJSON(System.out);
-//		
-//		System.out.println();
-//		System.out.println();
-//		
-//		TranslationScope.get("circleScope", Circle.class, Point.class);
-//		
-//		
-//		ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//		DataOutputStream test1 = new DataOutputStream(stream);
-//		
-//		circle.serialize(test1, FORMAT.TLV);
-//		circle.serialize(System.out, FORMAT.JSON);
+		System.out.println();
+		System.out.println();
 		
-//		Utils.writeHex(System.out, stream.toByteArray());				
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		DataOutputStream test = new DataOutputStream(byteArrayOutputStream);
+		
+		circle.serialize(test, FORMAT.TLV);
+		
+		Utils.writeHex(System.out, byteArrayOutputStream.toByteArray());		
+
+		System.out.println();
+		System.out.println();
+		
+		circleTranslationScope.deserializeByteArray(byteArrayOutputStream.toByteArray(), FORMAT.TLV);		
+
 	}
 
 	public void setArea(int area)
