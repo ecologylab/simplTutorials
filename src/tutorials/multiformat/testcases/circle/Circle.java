@@ -121,7 +121,8 @@ public class Circle extends ElementState
 		System.out.println();
 		System.out.println();
 		
-		circleTranslationScope.deserializeByteArray(byteArrayOutputStream.toByteArray(), FORMAT.TLV);		
+		Circle deCircle = (Circle) circleTranslationScope.deserializeByteArray(byteArrayOutputStream.toByteArray(), FORMAT.TLV);	
+		deCircle.serialize(System.out, FORMAT.XML);
 
 	}
 

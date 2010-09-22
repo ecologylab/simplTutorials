@@ -1,12 +1,14 @@
 package tutorials.multiformat.testcases.diamond;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.ElementState.FORMAT;
 import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
-
+import ecologylab.serialization.tlv.Utils;
 
 public class TestDiamond
 {
@@ -27,6 +29,9 @@ public class TestDiamond
 			}
 		};
 
+		TranslationScope translationScope = TranslationScope.get("container", ClassD.class,
+				ClassX.class, ClassC.class, ClassA.class, ClassB.class);
+
 		ClassC classC = new ClassC();
 		ClassD test = new ClassD(new ClassA(classC), new ClassB(classC));
 
@@ -42,31 +47,27 @@ public class TestDiamond
 		System.out.println(sb);
 
 		System.out.println();
-		ClassD data = (ClassD) TranslationScope.get("container", ClassD.class, ClassX.class,
-				ClassC.class, ClassA.class, ClassB.class).deserializeCharSequence(sb, FORMAT.JSON);
+		ClassD data = (ClassD) translationScope.deserializeCharSequence(sb, FORMAT.JSON);
 		data.serialize(System.out, FORMAT.XML);
 		System.out.println();
 		System.out.println();
 		data.serialize(System.out, FORMAT.JSON);
+		
+		System.out.println();
+		System.out.println();
+		
+		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+		DataOutputStream dataOutputStream = new DataOutputStream(byteArrayOutputStream);
+		
+		test.serialize(dataOutputStream, FORMAT.TLV);
+		
+		Utils.writeHex(System.out, byteArrayOutputStream.toByteArray());		
 
-//		String text =  "{'foo':'bar','coolness':2.0,'altitude':39000,'pilot':{'firstName':'Buzz','lastName':'Aldrin'},'mission':'apollo 11'}";//sb.toString().replace('"', '\'');
-//		JSONObject json = (JSONObject) JSONSerializer.toJSON(text); 
-//		
-//		System.out.println(json.toString());
+		System.out.println();
+		System.out.println();
+		
+		ClassD deDiamond = (ClassD)translationScope.deserializeByteArray(byteArrayOutputStream.toByteArray(), FORMAT.TLV);
+		deDiamond.serialize(System.out, FORMAT.XML);
 
-		// TranslationScope.graphSwitch = GRAPH_SWITCH.ON;
-		//
-		// StringBuilder output = new StringBuilder();
-		//
-		// test.serialize(output);
-		//
-		// System.out.println("Initialized object serialized into XML representation.");
-		// System.out.println(output);
-		//
-		// ClassD deserializedTest = (ClassD) TranslationScope.get("testcase1", ClassA.class,
-		// ClassB.class, ClassC.class, ClassD.class, ClassX.class).deserializeCharSequence(output);
-		//
-		// System.out.println("Deserilized object serialized into XML representation");
-		// deserializedTest.serialize(System.out);
 	}
 }
