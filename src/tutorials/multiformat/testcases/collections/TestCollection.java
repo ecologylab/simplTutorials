@@ -54,9 +54,7 @@ public class TestCollection
 		data.serialize(System.out, FORMAT.JSON);
 
 		System.out.println();
-		System.out.println();
-
-		System.out.println("objectsA".hashCode());
+		System.out.println();		
 
 		ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 		DataOutputStream dataOutputStream = new DataOutputStream(byteArrayOutputStream);
