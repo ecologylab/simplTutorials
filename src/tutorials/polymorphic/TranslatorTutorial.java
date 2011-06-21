@@ -2,7 +2,6 @@ package tutorials.polymorphic;
 
 import java.io.File;
 
-import translators.cocoa.CocoaTranslator;
 import tutorials.polymorphic.rogue.entity.threat.OrbitingThreat;
 import tutorials.polymorphic.rogue.entity.threat.PatrollingThreat;
 import tutorials.polymorphic.rogue.entity.threat.RepellableThreat;
@@ -11,6 +10,7 @@ import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.translators.cocoa.CocoaTranslator;
 
 public class TranslatorTutorial
 {
@@ -22,6 +22,8 @@ public class TranslatorTutorial
 		 * our annotated java source code to Objective-C header file.
 		 */
 		CocoaTranslator c = new CocoaTranslator();
+		
+		TranslationScope.setGraphSwitch();
 		
 		/*
 		 * We create an object of Translation scope of all the java files for which,
@@ -35,13 +37,13 @@ public class TranslatorTutorial
 			 * Call translateToObjC supplied with the path where we want our header files 
 			 * to be generated
 			 */
-			c.translateToObjC(new File ("/output"), tScope);
+			c.translateToObjC(new File ("output"), tScope);
 			
 			/*
 			 * Call translateToXML will serialize the internal data structures of 
 			 * ecologylab.serialization which should be used by objective-c version ecologylab.serialization
 			 */
-			tScope.serialize(new File("/output/gamedata_translationScope.xml"));
+			tScope.serialize(new File("output/gamedata_translationScope.xml"));
 		} 
 		catch (Exception e)
 		{

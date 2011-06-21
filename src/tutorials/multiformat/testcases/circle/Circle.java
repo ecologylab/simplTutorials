@@ -2,17 +2,13 @@ package tutorials.multiformat.testcases.circle;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintStream;
 
-
-import translators.cocoa.CocoaTranslator;
-
-
-import ecologylab.serialization.*;
-import ecologylab.serialization.tlv.TLVParser;
+import ecologylab.serialization.ElementState;
+import ecologylab.serialization.Hint;
+import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.tlv.Utils;
 
 /**

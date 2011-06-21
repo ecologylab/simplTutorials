@@ -44,6 +44,8 @@ public class PolymorphicTutorial
 	{
 		try
 		{
+			
+			TranslationScope.setGraphSwitch();
 			/*
 			 * Get translation scope
 			 */

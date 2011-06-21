@@ -4,8 +4,8 @@ package tutorials.rss;
 
 import java.io.File;
 
-import translators.cocoa.CocoaTranslator;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.translators.cocoa.CocoaTranslator;
 
 
 public class TranslatorTutorial 
