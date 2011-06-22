@@ -20,6 +20,8 @@ public class TranslatorTutorial
 		 */
 		CocoaTranslator c = new CocoaTranslator();
 		
+		TranslationScope.setGraphSwitch();
+		
 		/*
 		 * We create an object of Translation scope of all the java files for which,
 		 * We need to create the Translation Scope XML file.
