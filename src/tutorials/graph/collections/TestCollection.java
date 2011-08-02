@@ -1,8 +1,13 @@
 package tutorials.graph.collections;
 
 import java.io.IOException;
+import java.io.OutputStream;
+
+import ecologylab.generic.text.Format;
+import ecologylab.serialization.ElementState;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.ElementState.FORMAT;
 import ecologylab.serialization.TranslationScope.GRAPH_SWITCH;
 
 public class TestCollection
@@ -14,21 +19,53 @@ public class TestCollection
 	 */
 	public static void main(String[] args) throws SIMPLTranslationException, IOException
 	{
-		Container test = new Container();
-		StringBuilder output = new StringBuilder();
+
+		Container test = new Container().initializeInstance();
+		TranslationScope translationScope = TranslationScope.get("testcollection", Container.class,
+				ClassA.class);
+
+		testDeSerialization(test, translationScope, FORMAT.JSON, true);
+	}
+	
+
+	public static void testDeSerialization(ElementState test, TranslationScope translationScope,
+			FORMAT format, boolean setGraphSwitch) throws SIMPLTranslationException
+	{
+		System.out.println();
 		
-		TranslationScope.graphSwitch = GRAPH_SWITCH.ON;
+		if (setGraphSwitch)
+		{
+			TranslationScope.setGraphSwitch();
+		}
 
-		test.initializeInstance();
-		test.serialize(output);
+		final StringBuilder output = new StringBuilder();
+		OutputStream outputStream = new OutputStream()
+		{
+			@Override
+			public void write(int b) throws IOException
+			{
+				output.append((char) b);
+			}
+		};
 
-		System.out.println("Initialized object serialized into XML representation.");
+		ElementState deserializedObject = null;
+
+		test.serialize(outputStream, format);
+
+		System.out.println("Initialized object serialized into " + format + " representation.");
+		System.out.println();
+		
 		System.out.println(output);
+		
+		System.out.println();
 
-		Container deserializedTest = (Container) TranslationScope
-				.get("testcase1", Container.class, ClassA.class).deserializeCharSequence(output);
+		deserializedObject = translationScope.deserializeCharSequence(output, format);
 
-		System.out.println("Deserilized object serialized into XML representation");
-		deserializedTest.serialize(System.out);
+		System.out.println("Deserilized object serialized into " + format + "  representation");
+		System.out.println();
+		deserializedObject.serialize(System.out, format);
+
+		System.out.println();
+
 	}
 }

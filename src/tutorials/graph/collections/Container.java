@@ -6,6 +6,7 @@ import ecologylab.serialization.ElementState;
 
 public class Container extends ElementState
 {
+	@simpl_nowrap
 	@simpl_collection("objectsA")
 	private ArrayList<ClassA>	aObjects	= new ArrayList<ClassA>();
 
@@ -14,7 +15,7 @@ public class Container extends ElementState
 
 	}
 
-	public void initializeInstance()
+	public Container initializeInstance()
 	{
 		ClassA objA = new ClassA();
 
@@ -35,6 +36,7 @@ public class Container extends ElementState
 		aObjects.add(new ClassA());
 		aObjects.add(new ClassA());
 
+		return this;
 	}
 
 	public void setAobjects(ArrayList<ClassA> aobjects)

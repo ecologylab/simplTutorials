@@ -6,11 +6,11 @@ import ecologylab.serialization.ElementState;
 
 public class Container extends ElementState
 {
-	//@simpl_nowrap
+	@simpl_nowrap
 	@simpl_collection("objectsA")
 	private ArrayList<ClassA>		aObjects		= new ArrayList<ClassA>();
 
-  //@simpl_nowrap
+  @simpl_nowrap
 	@simpl_collection("myints")
 	private ArrayList<Integer>	myIntegers	= new ArrayList<Integer>();
 
