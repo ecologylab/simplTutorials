@@ -9,3 +9,90 @@
 			scalar_type="IntType" xml_hint="XML_LEAF"></field_descriptor>
 	</class_descriptor>
 </translation_scope>
+
+
+<translation_scope name="rss"
+	xmlns:simpl="http://ecologylab.net/research/simplGuide/serialization/index.html">
+	<class_descriptor name="tutorials.rss.Item" tag_name="item"
+		described_class="tutorials.rss.Item" described_class_simple_name="Item"
+		described_class_package_name="tutorials.rss" simpl:id="801818331">
+		<field_descriptor name="title" tag_name="title"
+			field="title" type="18" scalar_type="String" xml_hint="XML_LEAF"
+			needs_escaping="true" field_type="String">
+			<declaring_class_descriptor simpl:ref="801818331" />
+		</field_descriptor>
+		<field_descriptor name="description" tag_name="description"
+			field="description" type="18" scalar_type="String" xml_hint="XML_LEAF"
+			needs_escaping="true" field_type="String">
+			<declaring_class_descriptor simpl:ref="801818331" />
+		</field_descriptor>
+		<field_descriptor name="link" tag_name="link" field="link"
+			type="18" scalar_type="ParsedURL" xml_hint="XML_LEAF" needs_escaping="true"
+			field_type="ParsedURL">
+			<declaring_class_descriptor simpl:ref="801818331" />
+		</field_descriptor>
+		<field_descriptor name="guid" tag_name="guid" field="guid"
+			type="18" scalar_type="ParsedURL" xml_hint="XML_LEAF" needs_escaping="true"
+			field_type="ParsedURL">
+			<declaring_class_descriptor simpl:ref="801818331" />
+		</field_descriptor>
+		<field_descriptor name="author" tag_name="author"
+			field="author" type="18" scalar_type="String" xml_hint="XML_LEAF"
+			needs_escaping="true" field_type="String">
+			<declaring_class_descriptor simpl:ref="801818331" />
+		</field_descriptor>
+		<field_descriptor name="categorySet" tag_name="category_set"
+			field="categorySet" is_generic="true" type="5" scalar_type="String"
+			xml_hint="XML_ATTRIBUTE" collection_or_map_tag_name="category"
+			field_type="ArrayList" generic_parameters_string="&lt;String&gt;">
+			<declaring_class_descriptor simpl:ref="801818331" />
+			<collection_type name="simpl.types.collection.ArrayList"
+				simple_name="ArrayList" java_type_name="java.util.ArrayList"
+				c_sharp_type_name="List" objective_c_type_name="NSMutableArray"
+				package_name="java.util" simpl:id="820791943" />
+		</field_descriptor>
+	</class_descriptor>
+	<class_descriptor name="tutorials.rss.Rss" tag_name="rss"
+		described_class="tutorials.rss.Rss" described_class_simple_name="Rss"
+		described_class_package_name="tutorials.rss" simpl:id="1762721320">
+		<field_descriptor name="version" tag_name="version"
+			field="version" type="18" scalar_type="float" xml_hint="XML_ATTRIBUTE"
+			field_type="float">
+			<declaring_class_descriptor simpl:ref="1762721320" />
+		</field_descriptor>
+		<field_descriptor name="channel" tag_name="channel"
+			field="channel" element_class="tutorials.rss.Channel" type="3"
+			composite_tag_name="channel" field_type="Channel">
+			<element_class_descriptor name="tutorials.rss.Channel"
+				tag_name="channel" described_class="tutorials.rss.Channel"
+				described_class_simple_name="Channel" described_class_package_name="tutorials.rss"
+				simpl:id="2015744690">
+				<field_descriptor name="items" tag_name="items"
+					field="items" element_class="tutorials.rss.Item" is_generic="true"
+					type="4" collection_or_map_tag_name="item" field_type="ArrayList"
+					generic_parameters_string="&lt;Item&gt;">
+					<element_class_descriptor simpl:ref="801818331" />
+					<declaring_class_descriptor simpl:ref="2015744690" />
+					<collection_type simpl:ref="820791943" />
+				</field_descriptor>
+				<field_descriptor name="title" tag_name="title"
+					field="title" type="18" scalar_type="String" xml_hint="XML_LEAF"
+					needs_escaping="true" field_type="String">
+					<declaring_class_descriptor simpl:ref="2015744690" />
+				</field_descriptor>
+				<field_descriptor name="description" tag_name="description"
+					field="description" type="18" scalar_type="String" xml_hint="XML_LEAF"
+					needs_escaping="true" field_type="String">
+					<declaring_class_descriptor simpl:ref="2015744690" />
+				</field_descriptor>
+				<field_descriptor name="link" tag_name="link"
+					field="link" type="18" scalar_type="ParsedURL" xml_hint="XML_LEAF"
+					needs_escaping="true" field_type="ParsedURL">
+					<declaring_class_descriptor simpl:ref="2015744690" />
+				</field_descriptor>
+			</element_class_descriptor>
+			<declaring_class_descriptor simpl:ref="1762721320" />
+		</field_descriptor>
+	</class_descriptor>
+	<class_descriptor simpl:ref="2015744690" />
+</translation_scope>

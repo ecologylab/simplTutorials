@@ -6,7 +6,10 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 import ecologylab.net.ParsedURL;
+import ecologylab.serialization.ClassDescriptor;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
 import ecologylab.serialization.library.rss.Item;
 import ecologylab.serialization.library.rss.RssState;
@@ -60,7 +63,7 @@ public class RssXMLTutorial
 		 * "init_connection_response". Fields that are translated into attributes
 		 * and sub elements use a similar convention for determining identifiers.
 		 */
-		RssState feed = (RssState) rssTranslations.deserialize(url);
+		RssState feed = (RssState) rssTranslations.deserialize(url, Format.XML);
 
 		/*
 		 * Notice that, translated back to xml, not all attributes and elements
@@ -68,7 +71,7 @@ public class RssXMLTutorial
 		 * corresponding java class it is simply ignored.
 		 */
 		System.out.println("\nFeed translated back to xml by ecologylab.serialization:");
-		System.out.println(feed.serialize());
+		System.out.println(ClassDescriptor.serialize(feed, StringFormat.XML));
 
 		/*
 		 * Create our own item to add to the channel
@@ -87,6 +90,6 @@ public class RssXMLTutorial
 		feed.getChannel().getItems().add(0, ecologylabItem);
 
 		System.out.println("\nFeed translated to xml with our added item:");
-		System.out.println(feed.serialize());
+		System.out.println(ClassDescriptor.serialize(feed, StringFormat.XML));
 	}
 }

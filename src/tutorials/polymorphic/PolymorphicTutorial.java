@@ -1,16 +1,9 @@
 package tutorials.polymorphic;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.OutputStream;
 
-import tutorials.graph.collections.ClassA;
-import tutorials.graph.collections.ClassB;
-import tutorials.graph.collections.Container;
 import tutorials.polymorphic.rogue.entity.threat.OrbitingThreat;
 import tutorials.polymorphic.rogue.entity.threat.PatrollingThreat;
 import tutorials.polymorphic.rogue.entity.threat.RepellableThreat;
@@ -18,8 +11,10 @@ import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
+import ecologylab.serialization.ClassDescriptor;
+import ecologylab.serialization.Format;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.ElementState.FORMAT;
 
 public class PolymorphicTutorial
 {
@@ -45,7 +40,7 @@ public class PolymorphicTutorial
 		try
 		{
 			
-			TranslationScope.setGraphSwitch();
+			TranslationScope.enableGraphSerialization();
 			/*
 			 * Get translation scope
 			 */
@@ -59,16 +54,17 @@ public class PolymorphicTutorial
 			/*
 			 * Translating back from sample gameData file
 			 */
-			GameData<?> gameData = (GameData<?>) tScope.deserializeCharSequence(fileData);
+			GameData<?> gameData = (GameData<?>) tScope.deserialize(fileData, StringFormat.XML);
 
 			/*
 			 * Translating the game data back to XML
 			 */
-			gameData.serialize(new File("ecologylab/tutorials/polymorphic/output.xml"));
+			ClassDescriptor.serialize(gameData, new File("ecologylab/tutorials/polymorphic/output.xml"), Format.XML);
+			
 
 			// Again to console
 			System.out.println("----DESERIALIZED DATA----");
-			gameData.serialize(System.out);
+			ClassDescriptor.serialize(gameData, System.out, StringFormat.XML);
 
 //			System.out.println();
 //

@@ -3,6 +3,7 @@ package tutorials.oodss.chat;
 import ecologylab.collections.Scope;
 import ecologylab.oodss.distributed.server.clientsessionmanager.SessionHandle;
 import ecologylab.oodss.messages.UpdateMessage;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 /**
  * Implements a message that will be sent to chat clients to indicate that

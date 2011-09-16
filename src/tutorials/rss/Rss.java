@@ -3,6 +3,8 @@
 package tutorials.rss;
 
 import ecologylab.serialization.ElementState;
+import ecologylab.serialization.annotations.simpl_composite;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 public class Rss extends ElementState
 {

@@ -1,6 +1,7 @@
 package tutorials.oodss.historyecho;
 import ecologylab.collections.Scope;
 import ecologylab.oodss.messages.RequestMessage;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 /**
  * Implements a message that will be sent to

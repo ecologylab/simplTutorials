@@ -7,8 +7,9 @@ package tutorials.polymorphic.rogue.game2d.entity.goal;
 import java.awt.geom.Rectangle2D;
 
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
-import ecologylab.serialization.simpl_inherit;
-import ecologylab.serialization.ElementState.xml_tag;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.annotations.simpl_tag;
 
 /**
  * Goal represents a goal location. Goals can be collected by SeekerAvatar objects if the
@@ -20,7 +21,7 @@ import ecologylab.serialization.ElementState.xml_tag;
  * @author Zachary O. Toups (zach@ecologylab.net)
  */
 @simpl_inherit
-@xml_tag("g")
+@simpl_tag("g")
 public class Goal extends Entity implements GoalConstants, Comparable<Goal>
 {
 	

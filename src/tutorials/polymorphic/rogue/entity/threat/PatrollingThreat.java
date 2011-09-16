@@ -3,8 +3,8 @@
  */
 package tutorials.polymorphic.rogue.entity.threat;
 
-import ecologylab.serialization.simpl_inherit;
-import ecologylab.serialization.ElementState.xml_tag;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_tag;
 
 /**
  * A special predator that moves from goal to goal when not chasing the seekers.
@@ -16,7 +16,7 @@ import ecologylab.serialization.ElementState.xml_tag;
  * 
  */
 @simpl_inherit
-@xml_tag("pt")
+@simpl_tag("pt")
 public class PatrollingThreat extends Threat
 {
 	/** Constructor stub for XML translation. */

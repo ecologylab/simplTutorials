@@ -3,14 +3,14 @@ package tutorials.rss;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.URL;
 
 import ecologylab.net.ParsedURL;
-import ecologylab.serialization.ElementState;
+import ecologylab.serialization.ClassDescriptor;
+import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
+import ecologylab.serialization.StringFormat;
 import ecologylab.serialization.TranslationScope;
-import ecologylab.serialization.ElementState.FORMAT;
 
 public class MonomorphicTutorial {
 	
@@ -60,7 +60,7 @@ public class MonomorphicTutorial {
 		 * "init_connection_response". Fields that are translated into attributes
 		 * and sub elements use a similar convention for determining identifiers.
 		 */
-		Rss feed = (Rss) rssTranslations.deserialize(url);
+		Rss feed = (Rss) rssTranslations.deserialize(url, Format.XML);
 
 		/*
 		 * Notice that, translated back to xml, not all attributes and elements
@@ -68,7 +68,7 @@ public class MonomorphicTutorial {
 		 * corresponding java class it is simply ignored.
 		 */
 		System.out.println("\nFeed translated back to xml by ecologylab.serialization:");
-		System.out.println(feed.serialize());
+		System.out.println(ClassDescriptor.serialize(feed, StringFormat.XML));
 
 		/*
 		 * Create our own item to add to the channel
@@ -87,7 +87,7 @@ public class MonomorphicTutorial {
 		feed.getChannel().getItems().add(0, ecologylabItem);
 
 		System.out.println("\nFeed translated to xml with our added item:");
-		System.out.println(feed.serialize());
+		System.out.println(ClassDescriptor.serialize(feed, StringFormat.XML));
 		
 //		final StringBuilder sb = new StringBuilder();
 //		OutputStream outputStream = new OutputStream()

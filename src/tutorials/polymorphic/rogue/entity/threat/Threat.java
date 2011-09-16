@@ -6,8 +6,8 @@ package tutorials.polymorphic.rogue.entity.threat;
 
 
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
-import ecologylab.serialization.simpl_inherit;
-import ecologylab.serialization.ElementState.xml_tag;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_tag;
 
 /**
  * Threats are Targetters that hunt down SeekerAvatars in the game. Their in-game behavior is to
@@ -18,7 +18,7 @@ import ecologylab.serialization.ElementState.xml_tag;
  * @author William Hamilton (bill@ecologylab.net)
  */
 @simpl_inherit
-@xml_tag("t")
+@simpl_tag("t")
 public class Threat extends Entity
 {
 	/**

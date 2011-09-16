@@ -11,6 +11,11 @@ import tutorials.polymorphic.rogue.entity.threat.RepellableThreat;
 import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
 import ecologylab.serialization.ElementState;
+import ecologylab.serialization.annotations.Hint;
+import ecologylab.serialization.annotations.simpl_classes;
+import ecologylab.serialization.annotations.simpl_collection;
+import ecologylab.serialization.annotations.simpl_hints;
+import ecologylab.serialization.annotations.simpl_scalar;
 
 /**
  * GameData encapsulates all of the logical information about the game and is shared between the
@@ -70,6 +75,7 @@ public class GameData<T extends Threat> extends
 	protected ArrayList<T>										threats									= new ArrayList<T>();
 
 
+	@simpl_hints(Hint.XML_LEAF)
 	@simpl_scalar
 	protected double															score										= 0;
 

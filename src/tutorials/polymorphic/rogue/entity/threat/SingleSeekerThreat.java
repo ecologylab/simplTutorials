@@ -3,8 +3,9 @@
  */
 package tutorials.polymorphic.rogue.entity.threat;
 
-import ecologylab.serialization.simpl_inherit;
-import ecologylab.serialization.ElementState.xml_tag;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_scalar;
+import ecologylab.serialization.annotations.simpl_tag;
 
 /**
  * @author Zachary O. Toups (toupsz@ecologylab.net)
@@ -12,7 +13,7 @@ import ecologylab.serialization.ElementState.xml_tag;
  */
 
 @simpl_inherit
-@xml_tag("sst")
+@simpl_tag("sst")
 public class SingleSeekerThreat extends Threat
 {
 	@simpl_scalar

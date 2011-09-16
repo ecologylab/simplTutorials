@@ -3,8 +3,8 @@
  */
 package tutorials.polymorphic.rogue.entity.threat;
 
-import ecologylab.serialization.simpl_inherit;
-import ecologylab.serialization.ElementState.xml_tag;
+import ecologylab.serialization.annotations.simpl_inherit;
+import ecologylab.serialization.annotations.simpl_tag;
 
 /**
  * A special predator that finds a goal and stays near it.
@@ -13,7 +13,7 @@ import ecologylab.serialization.ElementState.xml_tag;
  */
 
 @simpl_inherit
-@xml_tag("ot")
+@simpl_tag("ot")
 public class OrbitingThreat extends Threat
 {
 	/** Constructor stub for XML translation. */
