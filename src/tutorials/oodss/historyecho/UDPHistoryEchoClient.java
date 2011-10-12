@@ -6,7 +6,7 @@ import java.util.Scanner;
 import ecologylab.collections.Scope;
 import ecologylab.oodss.distributed.client.NIODatagramClient;
 import ecologylab.oodss.messages.DefaultServicesTranslations;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 
 /** 
  * HistoryEchoServer: A sample server implemented via OODSS.
@@ -40,14 +40,14 @@ public class UDPHistoryEchoClient
 		/*
 		 *  Get base translations with static accessor
 		 */
-		TranslationScope baseServices = DefaultServicesTranslations.get();
+		SimplTypesScope baseServices = DefaultServicesTranslations.get();
 		
 		/*
 		 * compose translations, to create the “histEchoTrans”
 		 * space inheriting the base translations
 		 */
-		TranslationScope histEchoTranslations = 
-			TranslationScope.get("histEchoTrans",
+		SimplTypesScope histEchoTranslations = 
+			SimplTypesScope.get("histEchoTrans",
 										baseServices,
 										historyEchoClasses);	
 		

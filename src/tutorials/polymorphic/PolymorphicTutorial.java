@@ -11,10 +11,9 @@ import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
-import ecologylab.serialization.ClassDescriptor;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.StringFormat;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 
 public class PolymorphicTutorial
 {
@@ -40,11 +39,11 @@ public class PolymorphicTutorial
 		try
 		{
 			
-			TranslationScope.enableGraphSerialization();
+			SimplTypesScope.enableGraphSerialization();
 			/*
 			 * Get translation scope
 			 */
-			TranslationScope tScope = get();
+			SimplTypesScope tScope = get();
 
 			String fileData = readFileAsString("src/tutorials/polymorphic/GameData.xml");
 
@@ -59,12 +58,12 @@ public class PolymorphicTutorial
 			/*
 			 * Translating the game data back to XML
 			 */
-			ClassDescriptor.serialize(gameData, new File("ecologylab/tutorials/polymorphic/output.xml"), Format.XML);
+			SimplTypesScope.serialize(gameData, new File("ecologylab/tutorials/polymorphic/output.xml"), Format.XML);
 			
 
 			// Again to console
 			System.out.println("----DESERIALIZED DATA----");
-			ClassDescriptor.serialize(gameData, System.out, StringFormat.XML);
+			SimplTypesScope.serialize(gameData, System.out, StringFormat.XML);
 
 //			System.out.println();
 //
@@ -99,10 +98,10 @@ public class PolymorphicTutorial
 	/*
 	 * Creating Translation Scope of all the classes used by game data object
 	 */
-	private static TranslationScope get()
+	private static SimplTypesScope get()
 	{
 
-		TranslationScope tScope = TranslationScope.get("gamedata", GameData.class, Threat.class,
+		SimplTypesScope tScope = SimplTypesScope.get("gamedata", GameData.class, Threat.class,
 				SingleSeekerThreat.class, OrbitingThreat.class, RepellableThreat.class,
 				PatrollingThreat.class, Entity.class);
 

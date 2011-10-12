@@ -9,10 +9,9 @@ import tutorials.polymorphic.rogue.entity.threat.SingleSeekerThreat;
 import tutorials.polymorphic.rogue.entity.threat.Threat;
 import tutorials.polymorphic.rogue.game2d.entity.Entity;
 import tutorials.polymorphic.rogue.gamedata.GameData;
-import ecologylab.serialization.ClassDescriptor;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.StringFormat;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.translators.cocoa.CocoaTranslator;
 
 public class TranslatorTutorial
@@ -26,13 +25,13 @@ public class TranslatorTutorial
 		 */
 		CocoaTranslator c = new CocoaTranslator();
 		
-		TranslationScope.enableGraphSerialization();
+		SimplTypesScope.enableGraphSerialization();
 		
 		/*
 		 * We create an object of Translation scope of all the java files for which,
 		 * We need to create the Translation Scope XML file.
 		 */
-		TranslationScope tScope	= get();
+		SimplTypesScope tScope	= get();
 		try 
 		{
 			
@@ -46,8 +45,8 @@ public class TranslatorTutorial
 			 * Call translateToXML will serialize the internal data structures of 
 			 * ecologylab.serialization which should be used by objective-c version ecologylab.serialization
 			 */
-			ClassDescriptor.serialize(tScope, new File("output/gamedata_translationScope.xml"), Format.XML);		
-			ClassDescriptor.serialize(tScope, System.out, StringFormat.XML);
+			SimplTypesScope.serialize(tScope, new File("output/gamedata_translationScope.xml"), Format.XML);		
+			SimplTypesScope.serialize(tScope, System.out, StringFormat.XML);
 		} 
 		catch (Exception e)
 		{
@@ -58,11 +57,11 @@ public class TranslatorTutorial
 	/*
 	 * Creating Translation Scope of all the classes used by game data object
 	 */
-	private static TranslationScope get()
+	private static SimplTypesScope get()
 	{
 
 		
-		TranslationScope tScope = TranslationScope.get("gamedata", GameData.class,
+		SimplTypesScope tScope = SimplTypesScope.get("gamedata", GameData.class,
 				Threat.class, SingleSeekerThreat.class, OrbitingThreat.class, RepellableThreat.class,
 				PatrollingThreat.class, Entity.class);
 		

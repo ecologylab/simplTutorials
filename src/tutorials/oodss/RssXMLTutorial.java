@@ -6,11 +6,10 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 import ecologylab.net.ParsedURL;
-import ecologylab.serialization.ClassDescriptor;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.SIMPLTranslationException;
 import ecologylab.serialization.StringFormat;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.serialization.library.rss.Item;
 import ecologylab.serialization.library.rss.RssState;
 import ecologylab.serialization.library.rss.RssTranslations;
@@ -42,7 +41,7 @@ public class RssXMLTutorial
 		 * Get the translation scope. This references all of the classes that we
 		 * are considering for translation.
 		 */
-		TranslationScope rssTranslations = RssTranslations.get();
+		SimplTypesScope rssTranslations = RssTranslations.get();
 
 		/*
 		 * Read in RSS feed from URL
@@ -71,7 +70,7 @@ public class RssXMLTutorial
 		 * corresponding java class it is simply ignored.
 		 */
 		System.out.println("\nFeed translated back to xml by ecologylab.serialization:");
-		System.out.println(ClassDescriptor.serialize(feed, StringFormat.XML));
+		System.out.println(SimplTypesScope.serialize(feed, StringFormat.XML));
 
 		/*
 		 * Create our own item to add to the channel
@@ -90,6 +89,6 @@ public class RssXMLTutorial
 		feed.getChannel().getItems().add(0, ecologylabItem);
 
 		System.out.println("\nFeed translated to xml with our added item:");
-		System.out.println(ClassDescriptor.serialize(feed, StringFormat.XML));
+		System.out.println(SimplTypesScope.serialize(feed, StringFormat.XML));
 	}
 }

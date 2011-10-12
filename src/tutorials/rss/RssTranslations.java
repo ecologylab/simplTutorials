@@ -3,12 +3,12 @@
 package tutorials.rss;
 
 import ecologylab.generic.Debug;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 
 public class RssTranslations extends Debug
 {
-   public static TranslationScope get()
+   public static SimplTypesScope get()
    {
-	   return TranslationScope.get("rss", Rss.class, Channel.class, Item.class);
+	   return SimplTypesScope.get("rss", Rss.class, Channel.class, Item.class);
    } 
 }

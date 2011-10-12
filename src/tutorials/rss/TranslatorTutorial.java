@@ -4,10 +4,9 @@ package tutorials.rss;
 
 import java.io.File;
 
-import ecologylab.serialization.ClassDescriptor;
 import ecologylab.serialization.Format;
 import ecologylab.serialization.StringFormat;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 import ecologylab.translators.cocoa.CocoaTranslator;
 
 
@@ -23,13 +22,13 @@ public class TranslatorTutorial
 		 */
 		CocoaTranslator c = new CocoaTranslator();
 		
-		TranslationScope.enableGraphSerialization();
+		SimplTypesScope.enableGraphSerialization();
 		
 		/*
 		 * We create an object of Translation scope of all the java files for which,
 		 * We need to create the Translation Scope XML file.
 		 */
-		TranslationScope tScope	= RssTranslations.get();
+		SimplTypesScope tScope	= RssTranslations.get();
 		try 
 		{
 			/*
@@ -42,8 +41,8 @@ public class TranslatorTutorial
 			 * Call translateToXML will serialize the internal data structures of 
 			 * ecologylab.serialization which should be used by objective-c version ecologylab.serialization
 			 */
-			ClassDescriptor.serialize(tScope, new File("/output/rss_translationScope.xml"), Format.XML);
-			ClassDescriptor.serialize(tScope, System.out, StringFormat.XML);
+			SimplTypesScope.serialize(tScope, new File("/output/rss_translationScope.xml"), Format.XML);
+			SimplTypesScope.serialize(tScope, System.out, StringFormat.XML);
 			
 		} 
 		catch (Exception e)

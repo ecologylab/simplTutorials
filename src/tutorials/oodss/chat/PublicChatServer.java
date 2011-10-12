@@ -6,7 +6,7 @@ import java.net.InetAddress;
 import ecologylab.collections.Scope;
 import ecologylab.net.NetTools;
 import ecologylab.oodss.distributed.server.DoubleThreadedNIOServer;
-import ecologylab.serialization.TranslationScope;
+import ecologylab.serialization.SimplTypesScope;
 
 /**
  * PublicChatServer: A sample server implemented via OODSS. Intended to be used
@@ -24,7 +24,7 @@ public class PublicChatServer
 		/*
 		 * get base translations with static accessor
 		 */
-		TranslationScope publicChatTranslations = ChatTranslations.get();
+		SimplTypesScope publicChatTranslations = ChatTranslations.get();
 
 		/*
 		 * Creates a scope for the server to use as an application scope as well
